@@ -1,0 +1,40 @@
+body {
+  color: #333;
+  font: 18px/1.5 "Hiragino Kaku Gothic Pro", Arial, sans-serif;
+  min-width: 240px;
+  margin: 0;
+  padding: 0;
+}
+
+.form {
+  padding: 16px 24px;
+}
+
+input[type="number"] {
+  height: 34px;
+  width: 4rem;
+  padding: 12px;
+  background-color: #fff;
+  box-sizing: border-box;
+  border: 1px solid #b4b4b4;
+  border-radius: 3px;
+  outline: none;
+}
+input[type="number"]:focus {
+  border: 1px solid #63b2fb;
+}
+
+input[data-v-3ff23a86] {
+  position: relative;
+  width: 100%;
+}
+
+button {
+  height: 34px;
+  width: 80px;
+  margin: 0;
+  margin-left: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

@@ -1,0 +1,22 @@
+{
+  "name": "timetimer",
+  "version": "0.1.0",
+  "description": "time timer for chrome extension",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhythm191/timetimer.git"
+  },
+  "keywords": [
+    "chrome"
+  ],
+  "author": "rhythm191",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rhythm191/timetimer/issues"
+  },
+  "homepage": "https://github.com/rhythm191/timetimer#readme"
+}

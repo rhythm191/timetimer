@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "timetimer",
+  "version": "0.1",
+  "description": "time timer on chrome",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "images/128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
