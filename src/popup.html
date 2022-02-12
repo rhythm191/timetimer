@@ -8,19 +8,21 @@
     <title>time timer setting</title>
   </head>
   <body>
-    <div class="form">
+    <form id="timer-form">
       <span
         ><input
           type="number"
+          id="minutes"
           name="minutes"
           placeholder="30"
+          value="1"
           min="1"
           max="60"
         />
         分</span
       >
-      <button>開始</button>
-    </div>
+      <button type="submit">開始</button>
+    </form>
     <script src="popup.js"></script>
   </body>
 </html>
