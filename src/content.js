@@ -1,7 +1,6 @@
-let timerMinutes = 0;
-let startTime = new Date().getTime();
-
 (function () {
+  let timerMinutes = 0;
+  let startTime = new Date().getTime();
   let wrapper = document.getElementById("timetimer-wrapper");
 
   if (wrapper !== null) {
@@ -77,30 +76,21 @@ let startTime = new Date().getTime();
   wrapper.append(close);
 
   document.querySelector("body").append(wrapper);
+
+  // タイマーのアニメーション
+  function animationTimer() {
+    const circleAnime = document.getElementById("timetimer-circle");
+
+    if (circleAnime === null) {
+      return;
+    }
+
+    const now = new Date().getTime();
+    const passedTime = (now - startTime) / 60000;
+    const minutesDeg = ((60 - (timerMinutes - passedTime)) / 60) * 360;
+
+    circleAnime.style.background = `conic-gradient(#fff ${minutesDeg}deg, #fb343c ${minutesDeg}deg 360deg)`;
+
+    requestAnimationFrame(animationTimer);
+  }
 })();
-
-// タイマーのアニメーション
-function animationTimer() {
-  const circle = document.getElementById("timetimer-circle");
-
-  if (circle === null) {
-    return;
-  }
-
-  const now = new Date().getTime();
-  const passedTime = (now - startTime) / 60000;
-  const minutesDeg = ((60 - (timerMinutes - passedTime)) / 60) * 360;
-
-  circle.style.background = `conic-gradient(#fff ${minutesDeg}deg, #fb343c ${minutesDeg}deg 360deg)`;
-
-  requestAnimationFrame(animationTimer);
-}
-
-// タイマー表示を削除する
-function exiTtimetimerMode() {
-  const wrapper = document.getElementById("timetimer-wrapper");
-
-  if (wrapper !== null) {
-    wrapper.remove();
-  }
-}
