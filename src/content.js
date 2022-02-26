@@ -18,22 +18,33 @@ let startTime = new Date().getTime();
   wrapper.style.left = "calc(100vw - 200px)";
   wrapper.style.top = 0;
   wrapper.style.width = "200px";
-  wrapper.style.height = "200px";
+  wrapper.style.height = "240px";
   wrapper.style.margin = 0;
   wrapper.style.padding = 0;
   wrapper.style.zIndex = 3939;
   wrapper.style.background = "#fff";
   wrapper.style.border = "1px solid #333";
 
+  // タイマースケールを生成
+  const scale = document.createElement("img");
+  scale.id = "timetimer-scale";
+  scale.src = chrome.runtime.getURL("images/timer-scale.svg");
+  scale.alt = "";
+  scale.style.boxSizing = "border-box";
+  scale.style.position = "absolute";
+  scale.style.width = "180px";
+  scale.style.height = "180px";
+
+  wrapper.append(scale);
+
   // タイマーサークルを生成
   const circle = document.createElement("div");
   circle.id = "timetimer-circle";
   circle.style.boxSizing = "border-box";
   circle.style.position = "relative";
-  circle.style.padding = "10px 25px";
   circle.style.width = "150px";
   circle.style.height = "150px";
-  circle.style.margin = "8px 0 8px";
+  circle.style.margin = "17px 0 17px";
   circle.style.borderRadius = "50%";
 
   // タイマーの初期角度を計算
@@ -53,6 +64,7 @@ let startTime = new Date().getTime();
   close.id = "timetimer-close";
   close.innerText = "close";
   close.style.boxSizing = "border-box";
+  close.style.margin = "32px 0 0";
   close.style.padding = "4px 8px";
   close.style.background = "#fff";
   close.style.border = "1px solid #333";

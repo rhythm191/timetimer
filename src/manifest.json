@@ -9,5 +9,11 @@
     "default_icon": {
       "128": "images/128.png"
     }
-  }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["images/timer-scale.svg"],
+      "matches": ["<all_urls>"]
+    }
+  ]
 }
